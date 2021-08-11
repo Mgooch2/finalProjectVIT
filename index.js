@@ -58,20 +58,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
         count++;
         quantity.innerText= count;
         // total needs to be quantity times cost
-        total.innerText = "$"+parseFloat(price)*count;
-
+        let fprice = parseFloat(price)*count;
+        total.innerText = "$"+ fprice.toFixed(2);
         cartBtn.innerText = "My Cart ("+ count + ")";
     }
     up.addEventListener("click",upQty);
     // down quantity
     function downQty(){
+        if(count < 0){
+            emptyCart();
+        }else{
         count = parseInt(quantity.innerText);
         count--;
         quantity.innerText= count;
         // total needs to be quantity times cost
-        total.innerText = "$"+parseFloat(price)*count;
+        let fprice = parseFloat(price)*count;
+        total.innerText = "$"+ fprice.toFixed(2);
         //my Cart in background update
         cartBtn.innerText = "My Cart ("+ count+ ")";
+        }
     }
     down.addEventListener("click",downQty);
 
