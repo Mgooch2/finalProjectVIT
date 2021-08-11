@@ -12,7 +12,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let up = document.getElementById("up");
     let down = document.getElementById("down");
     let empty = document.getElementById("empty");
+    let chkModal = document.getElementById("modal-chkout")
+    let checkout = document.getElementById("cart-final");
+    let chkclose = document.getElementById("chkclose");
     let count;
+
 
     
     
@@ -78,11 +82,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     }
 
-    //checkout button
-    let checkout = document.getElementById("cart-final");
+    //checkout button brings up 
 
-    checkout.onclick = function checkout(){
-        
+    checkout.onclick = function chkModalOpen(){
+        closeModal();
+        // modal.style.display = "none";
+        document.getElementById("chk-total").innerText = "Your Total is: "+ total.innerText;
+        chkModal.style.display = "block"; 
     }
+
+    chkclose.onclick = function chkModalClose(){
+        chkModal.style.display = "none";
+    } 
 
 });

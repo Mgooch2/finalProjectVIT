@@ -2,6 +2,7 @@ body{
     background-image: linear-gradient(to bottom right,maroon,rgba(59, 133, 30, 0.719));
     background-attachment: fixed;
     height: 1000px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .container {
@@ -102,7 +103,7 @@ margin: 0 300px 0 100px;
 }
 .modal{
     display: block;
-    background-color: blue;
+    background-color: white;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -157,9 +158,7 @@ p{
 .modal-close{
     align-self: flex-start;
 }
-#close{
-    align-self: flex-end;
-}
+
 .btns{
     background-color: chartreuse; 
     font-size: large;
@@ -174,3 +173,27 @@ p{
     text-decoration: none;
     cursor: pointer;
 }
+.modal-chkout{
+    display: block;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(20, 39, 22, 0.74);
+}
+.chkout-cont{
+    display: flex;
+    background-image: linear-gradient(to bottom left,grey,rgba(59, 133, 30));
+    border: solid 6px maroon;
+    align-items: center;
+    margin: 0 auto;
+    width: 40%;
+} 
+.message{
+    margin: 0 auto;
+    text-align: center;
+}
+
