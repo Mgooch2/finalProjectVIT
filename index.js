@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let price = document.getElementById("price").innerText;
     let total = document.getElementById("total");
     let cartBtn = document.getElementById("myCart")
+    let up = document.getElementById("up");
+    let down = document.getElementById("down");
+    let empty = document.getElementById("empty");
+    let count;
 
     
     
@@ -21,9 +25,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // add to cart button that adds item to cart  
     //when add to cart is clicked, quantity innertext = 1, total innertext = price
       cart.onclick =function addCart(){
-          quantity.innerText = parseInt(1);
-          total.innerText = "$" + parseFloat(price);
-          cartBtn.innerText = "My Cart ("+ quantity.innerText + ")";
+          count= parseInt(quantity.innerText);
+          count++;
+          quantity.innerText = parseInt(count);
+          total.innerText = "$" + parseFloat(price*count);
+          cartBtn.innerText = "My Cart ("+ count+ ")";
       }   
     
     
@@ -39,8 +45,44 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     //quantity button needs to count up and down and show number
-    let up = document.getElementById("up");
-    let down = document.getElementById("down");
 
-    // total needs to be quantity times cost
+ 
+
+    up.onclick = function upQty(){
+        count = parseInt(quantity.innerText);
+        count++;
+        quantity.innerText= count;
+        // total needs to be quantity times cost
+        total.innerText = "$"+parseFloat(price)*count;
+
+        cartBtn.innerText = "My Cart ("+ count + ")";
+    }
+    down.onclick = function downQty(){
+        count = parseInt(quantity.innerText);
+        count--;
+        quantity.innerText= count;
+        // total needs to be quantity times cost
+        total.innerText = "$"+parseFloat(price)*count;
+        //my Cart in background update
+        cartBtn.innerText = "My Cart ("+ count+ ")";
+    }
+ 
+    //empty cart reset count to zero reset price to $0 reset my Cart
+
+    empty.onclick = function emptyCart(){
+        count = parseInt(0);
+        quantity.innerText = count;
+        total.innerText = "$"+ parseFloat(price)*count;
+        cartBtn.innerText = "My Cart ("+ count + ")";
+
+
+    }
+
+    //checkout button
+    let checkout = document.getElementById("cart-final");
+
+    checkout.onclick = function checkout(){
+        
+    }
+
 });
