@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiWorld3D Store</title>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <!-- parent container section id parent display flex on children-->
+    <section class="container">
+        <!-- flex items-->
+            <!-- image article-->
+            <article class="imgcol">
+                <!-- image with border-->
+                <img id ="yoda"src="./images/mandalorianbabyyoda.jpg" alt="babyyoda">
+            </article>
+            <!-- product article-->
+            <article class="productinfo">
+                <!-- product details div -->
+                <div id="details">
+                    <!-- product title -->
+                    <h2 id="name">Grogu</h2>
+                    <!-- product description -->
+                    <p id="desc">By MiWorld3D</p>
+                    <!-- product price -->
+                    <span>$</span><span id ="price">49.29</span>
+                </div>
+                <!-- button div -->
+                <div class="butsec">
+                    <!-- reviews button -->
+                    <button class="button revCom" id="revCom" >Reviews and Comments</button>
+                    <!-- cart button -->
+                    <button class="button cart"id="cart">Add to Cart</button>
+                </div>
+            </article>
+            <!-- checkout button article-->
+            <article class="myCart">
+                <!-- checkout button -->
+                <button class="button myCart" id="myCart">My Cart</button>
+            </article>
+        </section>
+    <!-- Reviews section -->
+    <section class="reviews">
+        <!-- Reviews and comments header -->
+        <h2>Reviews and Comments</h2>
+        <!-- add comment button? -->
+        <button class="button" id="comment">Leave Review/Comment</button>
+        <!-- fake comments? -->
+        <table class="table">
+            <tr class="table">
+                <th class="table">Name:</th>
+                <th class="table">Comment:</th>
+            </tr>
+            <tr>
+                <td class="table">Anonymous</td>
+                <td class="table">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum."</td>
+            </tr>
+        </table>
+
+    </section>
+    
+    <!-- modal section class cart-modal-->
+    <section class="cart-modal">
+   <!-- modal parent  div class modal id modal -->
+        <div class="modal" id="modal">
+        <!-- modal children div class modal cont -->
+            <div class="modal-cont">
+            <!-- image section-->
+                <div class="modal-img">
+                    <!-- img  -->
+                    <img src="./images/mandalorianbabyyoda.jpg" alt="" id="modalimg">
+                </div>
+            <!-- quantity div class btns -->
+                <div class="modal-mid">
+                    <h2>Grogu</h2>
+                    <p>Price: $49.29</p>
+                    <p>Quantity:</p>
+                    <!-- down button -->
+                    <button class ="btns" id="up">&#8743;</button> 
+                    <!-- quantity display box -->
+                    <div class="quan">
+                        <div class="dispBox" id="quantity">0</div>
+                    </div>
+                    <!-- up button -->
+                    <button class ="btns" id="down">&#8744;</button>
+                    <!-- total display box -->
+                    <p>Total</p>
+                    <div class="dispBox" id="total">$0.00</div>
+                    <!-- cont shopping button -->  
+                    <button class = "button" id="shop">Continue Shopping</button>
+                    <button class="button" id="cart-final">Checkout</button>
+                </div>
+            <!-- close button div -->
+                <div class="modal-close">
+                    <!-- close button -->
+                    <button class ="btns"id="close">&#215;</button>
+                </div>
+                
+            </div>
+            
+        </div>    
+    </section>
+
+
+
+
+</body>
+</html>
