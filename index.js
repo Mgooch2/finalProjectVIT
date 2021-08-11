@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         count--;
         quantity.innerText= count;
         // total needs to be quantity times cost
-        let fprice = parseFloat(price)*count;
+        fprice = parseFloat(price)*count;
         total.innerText = "$"+ fprice.toFixed(2);
         //my Cart in background update
         cartBtn.innerText = "My Cart ("+ count+ ")";
