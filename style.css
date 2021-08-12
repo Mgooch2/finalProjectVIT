@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to bottom right,maroon,rgba(59, 133, 30, 0.719));
+    background-image: linear-gradient(to top left,rgb(75, 50, 50),rgba(59, 133, 30, 0.719));
     background-attachment: fixed;
     height: 1000px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
